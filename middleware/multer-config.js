@@ -4,8 +4,8 @@ const multer = require("multer");
 const MIMES_TYPES = {
     "image/jpg": "jpg",
     "image/jpeg": "jpg",
-    "image/png": "jpg",
-    "images/webp": "webp"
+    "image/png": "png",
+    "image/webp": "webp"
 };
 
 const storage = multer.diskStorage({
