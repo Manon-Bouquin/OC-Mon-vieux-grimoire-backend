@@ -3,10 +3,13 @@ const mongoose = require("mongoose");
 const path = require("path");
 const bookRoutes = require("./routes/book");
 const userRoutes = require ("./routes/user");
+const dotenv = require ("dotenv");
 
-mongoose.connect('mongodb+srv://Myalag:mongoOC@cluster0.bylmx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',
+dotenv.config();
+
+mongoose.connect(`${process.env.MONGO_URL}`,
 { useNewUrlParser: true,
-  useUnifiedTopology: true })
+  useUnifiedTopology: true, })
 .then(() => console.log('Connexion à MongoDB réussie !'))
 .catch(() => console.log('Connexion à MongoDB échouée !'));
 

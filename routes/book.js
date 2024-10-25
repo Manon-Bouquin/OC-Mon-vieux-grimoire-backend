@@ -5,7 +5,6 @@ const multer = require("../middleware/multer-config");
 const bookCtrl = require("../controllers/book");
 const compressImage = require("../middleware/sharp");
 
-
 router.get("/bestrating", bookCtrl.bestRating); //Route spécifique d'abord
 router.get("/", bookCtrl.getAllBooks); 
 router.get("/:id", bookCtrl.getOneBook); //Route dynamique ensuite

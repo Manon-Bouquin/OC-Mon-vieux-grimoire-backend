@@ -5,7 +5,6 @@ exports.createBook = (req, res, next) => {
   const bookObject = JSON.parse(req.body.book);
   delete bookObject._id;
   delete bookObject._userId;
-  delete bookObject.averageRating;
   bookObject.ratings = [];
   const book = new Book({
     ...bookObject,
@@ -14,7 +13,7 @@ exports.createBook = (req, res, next) => {
   });
   book
     .save()
-    .then(() => res.status(201).json({ message: "Livre enregistré et image optimisée!" }))
+    .then(() => res.status(201).json({ message: "Livre enregistré!" }))
     .catch(error => res.status(400).json({ error }));
 };
 
