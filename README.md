@@ -18,7 +18,5 @@ MONGO_OPTIONS=retryWrites=true&w=majority&appName=<Mongo DB app Name>
 ```
 Le token: JWT_TOKEN=
 
-## Utilisation
+## Démarrer le projet
 Lancer le code de la partie frontend et backend séparément avec : npm start
-
-La partie frontend sera à l'adresse http://localhost:3000 et la partie backend sera à l'adresse http://localhost:4000
