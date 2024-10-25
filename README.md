@@ -16,7 +16,8 @@ MONGO_PASSWORD=<Mongo password>
 MONGO_DB=<Mongo DB name>
 ```
 Le token: JWT_TOKEN=
-!! pas d'espace entre "=" et <Mongo..>
+
+!!! Ne pas mettre d'espace entre "=" et <Mongo..>
 
 ## Démarrer le projet
 Lancer le code de la partie frontend et backend séparément avec : npm start
