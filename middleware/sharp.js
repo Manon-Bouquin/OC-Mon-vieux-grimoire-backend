@@ -14,7 +14,7 @@ const compressImage = async (req, res, next) => {
         .webp({ quality: 80 })
         .toFile(outPath);
         req.file.filename = filename; //MAJ du nom du fichier
-        next()
+        next();
     } catch (error) {
         res.status(500).json({ error: "Erreur lors du traitement de l'image" });
     }

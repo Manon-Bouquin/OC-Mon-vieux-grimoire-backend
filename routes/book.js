@@ -11,6 +11,6 @@ router.get("/:id", bookCtrl.getOneBook); //Route dynamique ensuite
 router.post("/", auth, multer, compressImage, bookCtrl.createBook);
 router.post("/:id/rating", auth, bookCtrl.ratingBook);
 router.put("/:id", auth, multer, compressImage, bookCtrl.modifyBook);
-router.delete("/:id", auth, bookCtrl.deleteBook)
+router.delete("/:id", auth, bookCtrl.deleteBook);
 
 module.exports = router;
